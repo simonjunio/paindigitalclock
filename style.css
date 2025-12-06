@@ -1,0 +1,165 @@
+ /* General body styling */
+
+
+ body {
+   font-family: 'Courier New', monospace; /* Monospace font for a digital feel */
+   text-align: center;
+   padding: 50px;
+   background-image: url("images/background.png"); /* Dark background resembling night */
+   background-size: cover; /* Ensures the image covers the full screen */
+   background-position: center center; /* Keeps the image centered */
+   background-repeat: no-repeat; /* Prevents the image from repeating */
+   color: rgb(255, 255, 255);
+   margin: 0;
+   height: 100vh; /* Ensures the height covers the full viewport */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+/* Initial Styling */
+h1 {
+  font-family: 'Courier New', monospace; /* Monospace font for a digital feel */
+  background-size: cover; /* Ensure the image covers the entire h1 */
+  background-position: center; /* Center the image */
+  color: rgb(0, 0, 0); /* Set the text color */
+  font-size: 36px; /* Font size */
+  text-align: center; /* Horizontally center the text */
+  padding: 20px; /* Add padding to give some space around the text */
+  position: absolute; /* Position it relative to the nearest positioned ancestor */
+  top: 20px; /* 20px from the top */
+  left: 50%; /* Position it at 50% from the left */
+  transform: translateX(-50%); /* Adjust it back by 50% of its width to center it */
+  text-shadow: 2px 2px 5px rgb(174, 0, 255); /* Add a text shadow to make the text readable on any background */
+  
+  opacity: 10; /* Start with the text hidden */
+  animation: fadeIn 0.5s ease-out, bounceIn 0.5s 0.5s forwards; /* Apply animations */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0.5; /* Start as invisible */
+  }
+  100% {
+    opacity: 10s; /* Fade in to visible */
+  }
+}
+
+/* Bounce-in animation */
+@keyframes bounceIn {
+  0% {
+    transform: translateX(-50%) scale(0.5); /* Start smaller */
+  }
+  50% {
+    transform: translateX(-50%) scale(1.2); /* Grow slightly larger */
+  }
+  100% {
+    transform: translateX(-50%) scale(1); /* Set back to normal size */
+  }
+}
+
+/* Hover effect: Text color change */
+h1:hover {
+  animation: glowEffect 0.5s alternate infinite; /* Add glow effect on hover */
+}
+
+/* Glowing effect */
+@keyframes glowEffect {
+  100% {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  }
+  100% {
+    text-shadow: 2px 2px 10px rgb(57, 0, 76); /* Red glowing effect */
+  }
+}
+
+
+  /* Styling the digital clock */
+  #clock {
+    font-size: 80px;
+    letter-spacing: 3px;
+    margin: 10px;
+    background-color: #000; /* Black background for clock */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #2b003bfb, 0 0 30px rgb(54, 0, 53);
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* Styling the date */
+  #date {
+    font-size: 30px;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    color: #bbb; /* Lighter color for the date */
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* Glowing hover effect for clock */
+  #clock:hover {
+    color: #330053; /* Akatsuki red color */
+    text-shadow: 0 0 15px #330053, 0 0 30px #330053, 0 0 45px #330053, 0 0 60px #330053;
+    font-display: italic;
+  }
+
+  /* Glowing hover effect for date */
+  #date:hover {
+    color: #330053; /* A more subtle red */
+    text-shadow: 0 0 15px #560067fb, 0 0 30px #560067fb, 0 0 45px #560067fb;
+  }
+
+
+ /* Styling the paragraph (quote) */
+p {
+  font-family: 'Courier New', monospace; /* Monospace font for a digital feel */
+  color: rgb(255, 255, 255); /* Set the text color */
+  font-size: 36px; /* Font size */
+  text-align: center; /* Horizontally center the text */
+  padding: 20px; /* Add padding to give some space around the text */
+  margin-top: 20px; /* Add space between the clock and the quote */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add a text shadow to make the text readable on any background */
+  
+  /* Animation properties */
+  opacity: 0; /* Start with the text hidden */
+  animation: fadeIn 5s ease-out, bounceIn 10s 10s forwards; /* Apply animations */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /* Start as invisible */
+  }
+  100% {
+    opacity: 1; /* Fade in to visible */
+  }
+}
+
+/* Bounce-in animation */
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.5); /* Start smaller */
+  }
+  50% {
+    transform: scale(1.2); /* Grow slightly larger */
+  }
+  100% {
+    transform: scale(1); /* Set back to normal size */
+  }
+}
+
+/* Hover effect: Text color change */
+p:hover {
+  animation: glowEffect 10s alternate infinite; /* Add glow effect on hover */
+}
+
+/* Glowing effect */
+@keyframes glowEffect {
+  0% {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  }
+  100% {
+    text-shadow: 2px 2px 10px rgb(57, 0, 76); /* Red glowing effect */
+  }
+}
